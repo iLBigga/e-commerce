@@ -26,8 +26,9 @@ class ProductSeeder extends Seeder
             $product->user_id = $faker->randomElement($user_id);
             $product->category_id = $faker->randomElement($categories);
             $product->name = $faker->sentence();
-            $product->description = $faker->text(100);
+            $product->description = $faker->text(500);
             $product->price = $faker->numberBetween(1, 200);
+            $product->image = $faker->imageUrl(360, 360, 'animals', true, 'cats');
 
             $product->save();
         }
